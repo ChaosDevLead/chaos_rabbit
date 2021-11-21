@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf=8">
+        <meta name="viewport" content="width=device-width, initial-scale=1,shrink-to-fit=no">
+        <link rel="stylesheet" href="../assets/css/style.css"/>
+        <link href="assets/css/bootstrap.css" rel="stylesheet" />
+        <link href="assets/css/landing-page.css" rel="stylesheet"/>
+        <title>Chaos Hub</title>
+    </head>
+    <body>
+      <nav class="navbar navbar-top" role="navigation">
+        <div class="nav-container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <!--<div class="navbar-header">
+              <div class="clock-container">
+                <div class="clock">
+                  <div class="needle hour"></div>
+                  <div class="needle minute"></div>
+                  <div class="needle second"></div>
+                  <div class="center-point"></div>
+                </div>
+                <div class="time"></div>
+                <div class="date"></div>
+              </div>
+            </div>-->
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="navbar-header" id="happy header">
+            I'm a header!
+            </div>
+            <div class="navbar-header" id="sad header">
+             Me too!
+            </div>
+        </div>
+      </nav>
+      <div class="container">
+        <div class="panel empty" id="zero">
+          Placeholder
+        </div>
+        <div class="panel active fill" draggable="true" id="one">
+          <button class="toggle-mode">Dark mode</button>
+            <h3>Home Automation</h3>
+        </div>
+        <div class="panel empty" id="two">
+          <div class="toggle-container">
+            <input type="checkbox" id="good" class="toggle">
+            <label for="good" class="label">
+              <div class="ball"></div>
+            </label>
+            <span>Good</span>
+          </div>
+          <h3>Calendar</h3>
+        </div>
+        <div class="panel" id="three">
+          <h3>ToDo</h3>
+        </div>
+        <div class="panel" id="four">
+          <h3>Kindle</h3>
+        </div>
+        <div class="panel" id="five">
+          <h3>Audible</h3>
+        </div>
+      </div>
+
+      <!--  
+        <ul class="menu-content">
+          <li>
+            <a href="#" class="fa fa-bookmark-o"></a>
+          </li>
+          <li><a href="#" class="fa fa-heart-o"><span onclick = "save();">SAVE</span></a></li>
+        </ul>
+      </div>
+      <div class="data">
+        <div class="content">
+          <span class="author" id = "author" contenteditable="">Chhekur</span>
+          <h1 class="title" id = "title" contenteditable="">Stranger Things: The sound of the Upside Down</h1>
+          <p class="text" id = "text" contenteditable="">The antsy bingers of Netflix will eagerly anticipate the digital release of the Survive soundtrack, out today.</p>
+        </div>
+      </div>
+    -->
+      <script src="../assets/js/script.js"></script>
+      <script src="../index.js"></script>
+      <script src="../assets/js/androidjs.js"></script>
+      <script>
+      // define function to get the data from storage if file already saved
+
+      window.onload = function(){
+        front.send('get-data', app.getPath('userData'));
+      }
+      
+      front.on('get-data-result', function(msg){
+        if(msg != "@@"){
+          let data = msg.split('@');
+          document.getElementById('author').innerHTML = data[0];
+          document.getElementById('title').innerHTML = data[1];
+          document.getElementById('text').innerHTML = data[2];
+        }
+      })
+      
+      // here define some functions to save the data into storage and get them back
+      
+      function save(){
+        let author = document.getElementById('author').innerHTML;
+        let title = document.getElementById('title').innerHTML;
+        let text = document.getElementById('text').innerHTML;
+        let msg = author + "@" + title + "@" + text;
+        // let make a complete string of message separated by @
+        // send this msg and path where to save file to back process to save in external storage of android
+        front.send('save-data',app.getPath('userData'), msg)
+      }
+      </script>
+    </body>
+</html>
