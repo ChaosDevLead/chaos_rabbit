@@ -41,7 +41,7 @@ body{
     height: 100vh;
     overflow:hidden;
     margin: 0;
-    background: url('../images/sunset\ \(2\).jpg') no-repeat fixed center/110%;
+    background: url('../images/sunset.jpg') no-repeat fixed center/110%;
 }
 /*panels all*/
 .container {
@@ -52,7 +52,7 @@ body{
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 30vh;
+    height: 50vh;
     border-radius: 50px;
     color: #fff;
     cursor: pointer;
@@ -60,7 +60,7 @@ body{
     margin: 10px;
     position: relative;
     transition: flex 0.7s ease-in;
-    width: 50%;
+    width: 40%;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 .panel h3 {
@@ -71,12 +71,20 @@ body{
     margin: 0;
     opacity: 0;
 }
+.extralinks {
+  font-size: 16px;
+  opacity: 0;
+}
 .panel.active {
     flex: 5;
 }
 .panel.active h3 {
     opacity: 1;
     transition: opacity 0.3s ease-in 0.4s;
+}
+.panel.active .extralinks {
+  opacity: 1;
+  transition: opacity 0.3s ease-in 0.4s;
 }
 #one {
     /*background-image: url('../assets/images/expanse1\(2\).png');*/
@@ -142,93 +150,8 @@ body{
   .toggle-mode:focus {
     outline: none;
   }
-  /*theme clock*/
-  .clock-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .clock {
-    position: relative;
-    width: 50px;
-    height: 50px;
-  }
-  
-  .needle {
-    background-color: black;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    height: 65px;
-    width: 3px;
-    transform-origin: bottom center;
-    transition: all 0.5s ease-in;
-  }
-  
-  .needle.hour {
-    transform: translate(-50%, -100%) rotate(0deg);
-  }
-  
-  .needle.minute {
-    transform: translate(-50%, -100%) rotate(0deg);
-    height: 100px;
-  }
-  
-  .needle.second {
-    transform: translate(-50%, -100%) rotate(0deg);
-    height: 100px;
-    background-color: #e74c3c;
-  }
-  
-  .center-point {
-    background-color: #e74c3c;
-    width: 10px;
-    height: 10px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 50%;
-  }
-  
-  .center-point::after {
-    content: '';
-    background-color: var(--primary-color);
-    width: 5px;
-    height: 5px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 50%;
-  }
-  
-  .time {
-    font-size: 30px;
-  }
-  
-  .date {
-    color: black;
-    font-size: 14px;
-    letter-spacing: 0.3px;
-    text-transform: uppercase;
-  }
-  
-  .date .circle {
-    background-color: white;
-    color: black;
-    border-radius: 50%;
-    height: 18px;
-    width: 18px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    line-height: 18px;
-    transition: all 0.5s ease-in;
-    font-size: 12px;
-  }
+
+
   /*toggle all*/
   @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
@@ -313,30 +236,6 @@ body {
     transform: translateX(0) scale(1);
   }
 }
-  /*drag and drop*/
-  .empty {
-    height: 150px;
-    width: 150px;
-    margin: 10px;
-    border: solid 3px black;
-    background: white;
-  }
-  
-  .fill {
-    height: 145px;
-    width: 145px;
-    cursor: pointer;
-  }
-  
-  .hold {
-    border: solid 5px #ccc;
-  }
-  
-  .hovered {
-    background-color: #333;
-    border-color: white;
-    border-style: dashed;
-  }
   
   @media (max-width: 480px) {
     .container {
