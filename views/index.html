@@ -2,46 +2,45 @@
 <html lang="en">
     <head>
         <meta charset="utf=8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1,shrink-to-fit=no">
-        <link rel="stylesheet" href="../css/style.css"/>
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="../css/style.css"/>
         <title>Chaos Hub</title>
     </head>
     <body>
       <nav class="navbar navbar-top" role="navigation">
         <div class="nav-container">
             <div class="navbar-header" id="happy header">
-            I'm a header!
             </div>
             <div class="navbar-header" id="sad header">
-             Me too!
             </div>
         </div>
       </nav>
       <div class="container">
-        <div class="panel active fill" draggable="true" id="one">
-            <h3>Home Automation</h3>
-            <a href="./automate.html" class="extralinks">Click Here</a>
+        <div class="panel active fill calendar" draggable="true" id="one">
+          <h3>Family Calendar</h3>
+          <a href="./calendar.html" class="extralinks">Click Here</a>
         </div>
-        <div class="panel empty" id="two">
-          <h3>Calendar</h3>
-          <a href="./catalog.html" class="extralinks">Click Here</a>
+        <div class="panel empty automate" id="two">
+          <h3>Smart Home</h3>
+          <a href="./automate.html" class="extralinks">Click Here</a>
         </div>
         <div class="panel" id="three">
-          <h3>ToDo</h3>
+          <h3>#</h3>
+          <a href="#" class="extralinks">Click Here</a>
+        </div>
+        <div class="panel catalog" id="four">
+          <h3>Audible Library</h3>
+          <a href="./catalog.html" class="extralinks">Click Here</a>
+        </div>
+        <div class="panel settings" id="five">
+          <h3>Settings</h3>
           <a href="./settings.html" class="extralinks">Click Here</a>
         </div>
-        <div class="panel" id="four">
-          <h3>Kindle</h3>
-          <a href="./kindleCat.html" class="extralinks">Click Here</a>
-        </div>
-        <div class="panel" id="five">
-          <h3>Audible</h3>
-          <a href="./audibleCat.html" class="extralinks">Click Here</a>
-        </div>
       </div>
-      <script src="../js/script.js"></script>
+      <script src="../js/index.js"></script>
     </body>
 </html>

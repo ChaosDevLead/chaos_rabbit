@@ -1,33 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Muli&display=swap');
 
-:root {
-    --red01: #D81159;
-    --magenta01: #8F2D56;
-    --teal01: #218380;
-    --yellow01: #FBB13C;
-    --blue01: #73D2DE;
-
-    --cream02: #F7FFF7;
-    --jet02: #343434;
-    --navy02: #2F3061;
-    --yellow02: #FFE66D;
-    --blue02: #6CA6C1;
-
-    --ltblue03: #90FCF9;
-    --mdblue03: #63B4D1;
-    --dkblue03: #7699D4;
-    --ltpurple: #9448BC;
-    --dkpurple: #480355;
-}
-
 html {
     transition: all 0.5s ease-in;
-    background-color: var(--cream02);
-    color: var(--dkpurple);
+    background-color: #F7FFF7;
+    color: #480355;
 }
 html.dark {
-    background-color: var(--dkpurple);
-    color: var(--cream02);
+    background-color: #480355;
+    color: #F7FFF7;
 }
 
 *{
@@ -41,7 +21,12 @@ body{
     height: 100vh;
     overflow:hidden;
     margin: 0;
-    background: url('../images/sunset.jpg') no-repeat fixed center/110%;
+    background: url('../images/istockphoto-95340984-612x612.jpg') no-repeat;
+    background-size: cover;
+    /*possible background pics: 
+    rainbow waves: istockphoto-95340984-612x612.jpg
+    rainbow smear: markus-spiske-k0rVudBoB4c-unsplash.jpg
+    rainbow draw: v978-background-02-kpzgw7o8.jpg*/
 }
 /*panels all*/
 .container {
@@ -54,14 +39,14 @@ body{
     background-repeat: no-repeat;
     height: 50vh;
     border-radius: 50px;
-    color: #fff;
+    color: #480355;
     cursor: pointer;
     flex: 0.5;
     margin: 10px;
     position: relative;
     transition: flex 0.7s ease-in;
     width: 40%;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 10px #000000; 
 }
 .panel h3 {
     font-size: 24px;
@@ -86,26 +71,55 @@ body{
   opacity: 1;
   transition: opacity 0.3s ease-in 0.4s;
 }
-#one {
-    /*background-image: url('../assets/images/expanse1\(2\).png');*/
-    background-color: #963484;
+
+.sub_container {
+  position: inherit;
+  display: flex;
 }
+.sub_panel {
+  position: relative;
+  width: 65%;
+  height: 20%;
+}
+
+.calendar {
+/*TODO: ensure that events don't overflow container et panel in large/small screen size: 
+desktop: max 6 (focus current hour et next); 
+half-screen: max 3 (focus current hour); 
+tablet: max 3 sed scroll 6; phone: max 2 sed scroll 6*/
+}
+.catalog {
+  /*TODO: ensure that audiobooks don't overflow container et panel in large/small screen size: 
+desktop: max 4; half-screen: max 2;
+tablet: max 2 sed scroll 4 ; phone: max 2 sed scroll 4*/
+}
+#one {
+  /*background-image: url('../assets/images/expanse5\(2\).png');*/
+    /*background-color: #2AF5FF;*/
+    background: radial-gradient( #13EB91 30%, #2ce272, #39E78A);
+}
+
 #two {
     /*background-image: url('../assets/images/expanse2\(2\).png');*/
-    background-color: #3066BE;
+    /*background-color: #3066BE;*/
+    background: radial-gradient(#001A84ff, #142D92ff, #283F9Fff, #3C52ADff, #5065BBff, #6477C8ff, #788AD6ff, #8C9DE4ff);
 }
 #three {
     /*background-image: url('../assets/images/expanse3\(3\).png');*/
-    background-color: #60AFFF;
+    /*background-color: #60AFFF;*/
+    background: radial-gradient(#D64661ff 20%, #8F2D56);
 }
 #four {
     /*background-image: url('../assets/images/expanse4\(2\).png');*/
-    background-color: #28C2FF;
+    /*background-color: #28C2FF;*/
+    background: radial-gradient(#DE8400ff, #E7AA26, #F0B22D);
 }
 #five {
-    /*background-image: url('../assets/images/expanse5\(2\).png');*/
-    background-color: #2AF5FF;
+    /*background-image: url('../assets/images/expanse1\(2\).png');*/
+   /* background-color: #963484;*/
+   background: radial-gradient(#abc4ffff 20%, #b6ccfeff, #c1d3feff, #ccdbfdff, #d7e3fcff, #e2eafcff, #edf2fbff);
 }  
+
 /*navbar all*/ 
 .navbar-top {
     position: absolute;
@@ -114,15 +128,15 @@ body{
     left: 0;
     z-index: 1030;
   }
-  .navbar {
+  /*.navbar {
     border: 0;
     font-size: 16px;
-    background-color: var(--cream02);
+    background-color: #F7FFF7;
   }
   .navbar::after{
       display: block;
       position: relative;
-      background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0, var(--cream02) 100%);
+      background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0, #F7FFF7 100%);
       height: 50px;
       width: 100%;
       content: '';
@@ -134,7 +148,7 @@ body{
   .navbar-top{
     background: rgba(0, 0, 0, 0.75);
   }
-
+*/
 /*dark toggle*/
 .toggle-mode {
     cursor: pointer;
