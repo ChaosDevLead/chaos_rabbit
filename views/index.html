@@ -4,43 +4,57 @@
         <meta charset="utf=8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1,shrink-to-fit=no">
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="../css/style.css"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="../css/index.css"/>
         <title>Chaos Hub</title>
     </head>
     <body>
-      <nav class="navbar navbar-top" role="navigation">
+ <!--      <nav class="navbar navbar-top" role="navigation">
         <div class="nav-container">
             <div class="navbar-header" id="happy header">
             </div>
             <div class="navbar-header" id="sad header">
             </div>
         </div>
-      </nav>
-      <div class="container">
-        <div class="panel active fill calendar" draggable="true" id="one">
-          <h3>Family Calendar</h3>
-          <a href="./calendar.html" class="extralinks">Click Here</a>
-        </div>
-        <div class="panel empty automate" id="two">
-          <h3>Smart Home</h3>
-          <a href="./automate.html" class="extralinks">Click Here</a>
-        </div>
-        <div class="panel" id="three">
-          <h3>#</h3>
-          <a href="#" class="extralinks">Click Here</a>
-        </div>
-        <div class="panel catalog" id="four">
-          <h3>Audible Library</h3>
-          <a href="./catalog.html" class="extralinks">Click Here</a>
-        </div>
-        <div class="panel settings" id="five">
-          <h3>Settings</h3>
-          <a href="./settings.html" class="extralinks">Click Here</a>
+      </nav> -->
+      <div class="container-fluid row fullscreen">
+      <div class="activepanel col-lg-8">
+        <div class="panel active calendar order-1" id="one">
+          <div class="labelGroup">
+            <img src="../images/icons/download (1).png" alt="" class="icon">
+            <a href="./calendar.html" class="extralinks"><span class="label label-primary">Family Calendar</span></a>
+          </div>
         </div>
       </div>
+      <div class="container passivepanels col-lg-4">
+        <div class="panel automate order-2" id="two">
+          <div class="labelGroup">
+            <img src="../images/icons/images.png" alt="" class="icon">
+            <a href="./automate.html" class="extralinks"><span class="label label-primary">Smart Home</span></a>
+          </div>
+        </div>
+        <div class="panel order-3 grocery" id="three">
+          <div class="labelGroup">
+            <img src="../images/icons/download (4).png" alt="" class="icon">
+            <a href="./grocery.html" class="extralinks"><span class="label label-primary">Grocery Helper</span></a>
+          </div>
+        </div>
+        <div class="panel catalog order-4" id="four">
+          <div class="labelGroup">
+            <img src="../images/icons/download (7).png" class="icon">
+            <a href="./audible.html" class="extralinks"><span class="label label-primary">Audible Library</span></a>
+          </div>
+        </div>
+        <div class="panel settings order-5" id="five">
+          <div class="labelGroup">
+            <img src="../images/icons/download (2).png" alt="" class="icon">
+            <a href="./settings.html" class="extralinks"><span class="label label-primary">Settings</span></a>       
+          </div>
+        </div>
+      </div>
+    </div>
       <script src="../js/index.js"></script>
     </body>
 </html>
