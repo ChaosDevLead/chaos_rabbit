@@ -16,7 +16,10 @@
         <div class="panel active calendar order-1" id="one">
           <div class="labelGroup">
             <img src="./site-data/images/download (1).png" alt="" class="icon">
-            <a href="./site-data/views/calendar.html" class="extralinks"><span class="label label-primary">Family Calendar</span></a>
+            <a href="./site-data/views/calendar.html" class="extralinks">Family Calendar</a>
+          </div>
+           <!--calender_display opacity=0 et !populate until onclick=1/catalog panel=active-->
+          <div class="calender_display">
           </div>
         </div>
       </div>
@@ -24,29 +27,127 @@
         <div class="panel automate order-2" id="two">
           <div class="labelGroup">
             <img src="./site-data/images/images.png" alt="" class="icon">
-            <a href="./site-data/views/automate.html" class="extralinks"><span class="label label-primary">Smart Home</span></a>
+            <a href="./site-data/views/automate.html" class="extralinks">Smart Home</a>
           </div>
+          <!--smartPanels opacity=0 until onclick=1/automate panel=active-->
+          <panel class="smartPanels panel">
+              <h4>Master Bedroom Light</h4>
+              <div class="toggle-container">
+                <span><strong>ON</strong></span>
+                <input type="checkbox" id="masterBedLight" class="toggle">
+                <label for="masterBedLight" class="label">
+                  <div class="ball"></div>
+                </label>
+                <span><strong>OFF</strong></span>
+              </div>
+            </panel>
+            <panel class="smartPanels panel">
+              <h4>Living Room Light</h4>
+              <div class="toggle-container">
+                <span><strong>ON</strong></span>
+                <input type="checkbox" id="LivingRmLight" class="toggle">
+                <label for="LivingRmLight" class="label">
+                  <div class="ball"></div>
+                </label>
+                <span><strong>OFF</strong></span>
+              </div>
+            </panel>
+            <panel class="smartPanels panel">
+              <h4>Television Plug</h4>
+              <div class="toggle-container">
+                <span><strong>ON</strong></span>
+                <input type="checkbox" id="tvPlug" class="toggle">
+                <label for="tvPlug" class="label">
+                  <div class="ball"></div>
+                </label>
+                <span><strong>OFF</strong></span>
+              </div>
+            </panel>
         </div>
         <div class="panel order-3 grocery" id="three">
           <div class="labelGroup">
             <img src="./site-data/images/download (4).png" alt="" class="icon">
-            <a href="./site-data/views/grocery.html" class="extralinks"><span class="label label-primary">Grocery Helper</span></a>
+            <a href="./site-data/views/grocery.html" class="extralinks">Grocery Helper</a>
+          </div>
+          <!--grocery_display opacity=0 until onclick=1/grocery panel=active-->
+          <div class="grocery_display">
           </div>
         </div>
         <div class="panel catalog order-4" id="four">
           <div class="labelGroup">
             <img src="./site-data/images/download (7).png" class="icon">
-            <a href="./site-data/views/audible.html" class="extralinks"><span class="label label-primary">Audible Library</span></a>
+            <a href="./site-data/views/audible.html" class="extralinks">Audible Library</a>
+            <!--bookList opacity=0 et !library() populate until onclick=1/catalog panel=active-->
+            <div class="container bookList">
+            </div>
           </div>
         </div>
         <div class="panel settings order-5" id="five">
           <div class="labelGroup">
             <img src="./site-data/images/download (2).png" alt="" class="icon">
-            <a href="./site-data/views/settings.html" class="extralinks"><span class="label label-primary">Settings</span></a>       
+            <a href="./site-data/views/settings.html" class="extralinks">Settings</a>       
+          </div>
+          <!--settings opacity=0 until onclick=1/catalog panel=active-->
+          <div class="settings-container settings">
+            <div class="settings active">
+              <h3 class="settings-title">
+                A Setting
+              </h3>
+              <div class="toggle-container">
+                <span><strong>ON</strong></span>
+                <input type="checkbox" id="alpha" class="toggle">
+                <label for="alpha" class="label">
+                  <div class="ball"></div>
+                </label>
+                <span><strong>OFF</strong></span>
+              </div>
+              <button class="settings-toggle">
+                <i class="fas fa-chevron-down"></i>
+                <i class="fas fa-times"></i>
+              </button>
+            </div>
+            <div class="settings-container">
+            <div class="settings active">
+              <h3 class="settings-title">
+                Another Setting
+              </h3>
+              <div class="toggle-container">
+                <span><strong>ON</strong></span>
+                <input type="checkbox" id="beta" class="toggle">
+                <label for="beta" class="label">
+                  <div class="ball"></div>
+                </label>
+                <span><strong>OFF</strong></span>
+              </div>
+              <button class="settings-toggle">
+                <i class="fas fa-chevron-down"></i>
+                <i class="fas fa-times"></i>
+              </button>
+            </div>
+            <div class="settings-container">
+              <div class="settings active">
+                <h3 class="settings-title">
+                  Another Another Setting
+                </h3>
+                <div class="toggle-container">
+                  <span><strong>ON</strong></span>
+                  <input type="checkbox" id="delta" class="toggle">
+                  <label for="delta" class="label">
+                    <div class="ball"></div>
+                  </label>
+                  <span><strong>OFF</strong></span>
+                </div>
+                <button class="settings-toggle">
+                  <i class="fas fa-chevron-down"></i>
+                  <i class="fas fa-times"></i>
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+      </div>
+      </div>
       <script src="./index.js"></script>
     </body>
 </html>
