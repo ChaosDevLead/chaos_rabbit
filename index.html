@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1,shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="./index.css" />
+    <title>Chaos Hub</title>
+  </head>
+  <body>
+    <div class="container-fluid row fullscreen">
+      <div class="activepanel col-lg-8">
+        <div class="panel active calendar order-1" id="one" onclick="panelHandler()" onload="populateCalendar()">
+          <div class="iconGroup">
+            <img src="./site-data/images/calendar.png" alt="calendar image" class="icon">
+          </div>
+          <div class="panel-body1">
+            <img src="./site-data/images/imageswip.png" alt="work in progress image" class="excuse">
+          </div>
+        </div>
+      </div>
+      <div class="container passivepanels col-lg-4">
+        <div class="panel automate passive order-2" id="two" onclick="panelHandler()">
+          <div class="iconGroup">
+            <img src="./site-data/images/automate.png" alt="smart home image" class="icon">
+          </div>
+          <div class="panel-body2">
+            <div class="smartPanels">
+              <h4>Master Bedroom Light</h4>
+              <div class="toggle-container">
+                <span>
+                  <strong>ON</strong>
+                </span>
+                <input type="checkbox" id="#masterbedroomlight" class="toggle">
+                <label for="#masterbedroomlight" class="label">
+                  <div class="ball"></div>
+                </label>
+                <span>
+                  <strong>OFF</strong>
+                </span>
+              </div>
+            </div>
+            <div class="smartPanels">
+              <h4>Living Room Light</h4>
+              <div class="toggle-container">
+                <span>
+                  <strong>ON</strong>
+                </span>
+                <input type="checkbox" id="#livingroomlight" class="toggle">
+                <label for="#livingroomlight" class="label">
+                  <div class="ball"></div>
+                </label>
+                <span>
+                  <strong>OFF</strong>
+                </span>
+              </div>
+            </div>
+            <div class="smartPanels">
+              <h4>Television Plug</h4>
+              <div class="toggle-container">
+                <span>
+                  <strong>ON</strong>
+                </span>
+                <input type="checkbox" id="#televisionplug" class="toggle">
+                <label for="#televisionplugs" class="label">
+                  <div class="ball"></div>
+                </label>
+                <span>
+                  <strong>OFF</strong>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="panel order-3 passive grocery" id="three" onclick="panelHandler()">
+          <div class="iconGroup">
+            <img src="./site-data/images/grocery.png" alt="grocery cart image" class="icon">
+          </div>
+          <div class="panel-body3">
+            <img src="./site-data/images/imageswip.png" alt="work in progress image" class="excuse">
+          </div>
+        </div>
+        <div class="panel catalog passive order-4" id="four" onclick="panelHandler()" onload="getLibrary()">
+          <div class="iconGroup">
+            <img src="./site-data/images/audible.png" alt="audible library image" class="icon">
+          </div>
+          <div class="panel-body4"></div>
+        </div>
+        <div class="panel settings passive order-5" id="five" onclick="panelHandler()">
+          <div class="iconGroup">
+            <img src="./site-data/images/settings.png" alt="settings image" class="icon">
+          </div>
+          <div class="panel-body5">
+            <div class="settingsPanels">
+              <h4>Setting Alpha</h4>
+              <div class="toggle-container">
+                <span>
+                  <strong>ON</strong>
+                </span>
+                <input type="checkbox" id="#alpha" class="toggle">
+                <label for="#alpha" class="label">
+                  <div class="ball"></div>
+                </label>
+                <span>
+                  <strong>OFF</strong>
+                </span>
+              </div>
+            </div>
+            <div class="settingsPanels">
+              <h4>Setting Beta</h4>
+              <div class="toggle-container">
+                <span>
+                  <strong>ON</strong>
+                </span>
+                <input type="checkbox" id="#beta" class="toggle">
+                <label for="#beta" class="label">
+                  <div class="ball"></div>
+                </label>
+                <span>
+                  <strong>OFF</strong>
+                </span>
+              </div>
+            </div>
+            <div class="settingsPanels">
+              <h4>Setting Charlie</h4>
+              <div class="toggle-container">
+                <span>
+                  <strong>ON</strong>
+                </span>
+                <input type="checkbox" id="#charlie" class="toggle">
+                <label for="#charlie" class="label">
+                  <div class="ball"></div>
+                </label>
+                <span>
+                  <strong>OFF</strong>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+    </div>
+    <script src="./index.js"></script>
+  </body>
+</html>
